@@ -1,0 +1,31 @@
+#include<stdio.h>
+int main()
+{
+    int a[100],n,i,rev=0,d,t;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    for(i=0;i<n;i++)
+    {
+        t=a[i];
+        while(a[i])
+        {
+            d=a[i]%10;
+            rev=rev*10+d;
+            a[i]=a[i]/10;
+        }
+        if(rev==t)
+        {
+            printf("True
+");
+        }
+        else
+        {
+            printf("False
+");
+        }
+        rev=0;
+    }
+}

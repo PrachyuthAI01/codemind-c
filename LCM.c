@@ -1,27 +1,27 @@
 #include<stdio.h>
 int main()
 {
-	int a,b,t=2,lcm=1;
-	scanf("%d%d",&a,&b);
+	int p,v,r=2,l=1;
+	scanf("%d%d",&p,&v);
 	while(1)
 	{
 	
-		if(a%t==0 && b%t==0)
+		if(p%r==0 && v%r==0)
 		{
-			a=a/t;
-			b=b/t;
-			lcm=lcm*t;
+			p=p/r;
+			v=v/r;
+			l=l*r;
 		}
 		else
 		{
-			t++;
+			r++;
 		}
-		if(a<t || b<t)
+		if(p<r || v<r)
 		{
 			break;
 		}
 		
 	}
-	printf("%d",lcm*a*b);
+	printf("%d",l*p*v);
 	return 0;
 }

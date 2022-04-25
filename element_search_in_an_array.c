@@ -12,7 +12,8 @@ int main()
     {
         if(t==a[i])
         {
-            s=1;
+            s+=1;
+            break;
             
         }
     }

@@ -1,22 +1,22 @@
 #include<stdio.h>
-int ispal(int x)
+int ispal(int n)
 {
-	int y,d,res=0;
-	y=x;
-	while(y)
-	{
-		d=y%10;
-		res=res*10+d;
-		y=y/10;	
-	}
-	if(x==res)
-	{
-		return 1;
-	}
-	else
-	{
-		return 0;
-	}
+    int d,res=0,temp;
+    temp=n;
+    while(n)
+    {
+        d=n%10;
+        res=res*10+d;
+        n=n/10;
+    }
+    if(temp==res)
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
 }
 int main()
 {

@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-    int a[100],i,n,c=0,d=0;
+    int i,n,a[100],P,V;
     scanf("%d",&n);
     for(i=0;i<n;i++)
     {
@@ -9,19 +9,16 @@ int main()
     }
     for(i=0;i<n;i++)
     {
-        if(a[i]%2)
+        if(a[i]%2!=0)
         {
-            c++;
+            P++;
+        }
+        if(a[i]%2!=0&&i%2!=0)
+        {
+            V++;
         }
     }
-    for(i=0;i<n;i++)
-    {
-        if(a[i]%2 && i%2)
-        {
-            d++;
-        }
-    }
-    if(c==d)
+    if(P==V)
     {
         printf("True");
     }

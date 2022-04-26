@@ -1,8 +1,7 @@
 #include<stdio.h>
-#include<math.h>
 int main()
 {
-    int i,x,n,avg=0,a[100],N,t,c=0;
+    int x,i,n,a[100],avg=0,c=0,N;
     scanf("%d",&n);
     for(i=0;i<n;i++)
     {
@@ -12,8 +11,7 @@ int main()
     {
         avg=avg+a[i];
     }
-    x=avg/n;
-    N=floor(x);
+    N=avg/n;
     for(i=0;i<n;i++)
     {
         if(N>=a[i])
@@ -22,4 +20,6 @@ int main()
         }
     }
     printf("%d",c);
+    
+    
 }

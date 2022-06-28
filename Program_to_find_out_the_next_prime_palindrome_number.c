@@ -1,15 +1,15 @@
 #include<stdio.h>
-int isitpal(int num)
+int npal(int k)
 {
-    int d,res=0,temp;
-    temp=num;
-    while(num)
+    int r,s=0,d;
+    r=k;
+    while(k)
     {
-        d=num%10;
-        res=res*10+d;
-        num=num/10;
+        d=k%10;
+        s=s*10+d;
+        k/=10;
     }
-    if(temp==res )
+    if(s==r)
     {
         return 1;
     }
@@ -18,36 +18,35 @@ int isitpal(int num)
         return 0;
     }
 }
-int isprime(int num)
+int pr(int k)
 {
-    int i,fc=0;
-    for(i=1;i<=num;i++)
-	{
-		if(num%i==0)
-		{
-			fc++;	
-		}	
-	}
-	if(fc==2)
-	{
-		return 1;
-	}
-	else
-	{
-		return 0;
-	}
+    int r,l=0;
+    for(r=1;r<=k;r++)
+    {
+        if(k%r==0)
+        {
+            l++;
+        }
+    }
+    if(l==2)
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
 }
-
 int main()
 {
-    int n,np;
-    scanf("%d",&n);
-    for(np=n+1;;np++)
+    int v,k;
+    scanf("%d",&v);
+    for(k=v+1;;k++)
     {
-        if(isitpal(np)&&isprime(np))
+        if(npal(k) && pr(k))
         {
+            printf("%d",k);
             break;
         }
     }
-    printf("%d",np);
 }

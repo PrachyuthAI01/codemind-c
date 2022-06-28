@@ -1,18 +1,18 @@
 #include<stdio.h>
 int main()
 {
-    int n,a[100]={0},d;
+    int n,k,v[2004]={0};
     scanf("%d",&n);
     while(n)
     {
-        d=n%10;
-        if(a[d]==1)
+        k=n%10;
+        if(v[k]==1)
         {
             break;
         }
         else
         {
-            a[d]=1;
+            v[k]=1;
         }
         n=n/10;
     }

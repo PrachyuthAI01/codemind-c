@@ -1,15 +1,15 @@
 #include<stdio.h>
-int ispal(int n)
+int pal(int a)
 {
-    int d,res=0,temp;
-    temp=n;
-    while(n)
+    int b,r,s=0;
+    b=a;
+    while(a)
     {
-        d=n%10;
-        res=res*10+d;
-        n=n/10;
+        r=a%10;
+        s=s*10+r;
+        a/=10;
     }
-    if(temp==res)
+    if(s==b)
     {
         return 1;
     }
@@ -20,32 +20,32 @@ int ispal(int n)
 }
 int main()
 {
-	int n,pp,np;
-	scanf("%d",&n);
-	for(pp=n-1;;pp-=1)
-	{
-		if(ispal(pp))
-		{
-			break;
-		}
-	}
-	for(np=n+1;;np+=1)
-	{
-		if(ispal(np))
-		{
-			break;
-		}
-	}
-	if(n-pp>np-n)
-	{
-		printf("%d",np);
-	}
-	if(n-pp<np-n)
-	{
-		printf("%d",pp);
-	}
-	if(n-pp==np-n)
-	{
-		printf("%d %d",pp,np);
-	}
+    int r,v,k;
+    scanf("%d",&r);
+    for(v=r-1;;v--)
+    {
+        if(pal(v))
+        {
+            break;
+        }
+    }
+    for(k=r+1;;k++)
+    {
+        if(pal(k))
+        {
+            break;
+        }
+    }
+    if(k-r==r-v)
+    {
+        printf("%d %d",v,k);
+    }
+    else if(k-r>v-r)
+    {
+        printf("%d",v);
+    }
+    else
+    {
+        printf("%d",k);
+    }
 }
